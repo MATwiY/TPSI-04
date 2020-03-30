@@ -16,8 +16,11 @@
     </head>
     <body>
         <h1>Cześć, <c:out value="${imie}"/>!</h1>
-        
-        <h1>Cześć, ${person.firstName} ${person.lastName}!</h1>
+        <!-- 
+            c:out nie dopuści do kompilacji kodu który wprowadzimy w formularzu 
+            a wyrażenie $ przepuści kod.
+        -->
+        <h1>Cześć, <c:out value="${person.firstName} ${person.lastName}"/>!</h1>
         <br/>
         <a href="">mailto:${person.email}</a>
         
